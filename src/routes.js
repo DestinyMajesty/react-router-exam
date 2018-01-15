@@ -13,14 +13,15 @@ const AsyncHome = asyncComponent(() => import("./routes/home"));
 const AsyncAbout = asyncComponent(() => import("./routes/about"));
 const AsyncSystem = asyncComponent(() => import("./routes/system"));
 const AsyncManage = asyncComponent(() => import("./routes/manage"));
-
+const AsyncInherit = asyncComponent(() => import("./routes/inherit"));
 
 const BasicRouter = () => (
 	<Router>
 		<div>
 			<ul>
-				<li><Link to="/home">Home</Link></li>
-				<li><Link to="/about">About</Link></li>
+				<li><Link to="/home">首页</Link></li>
+				<li><Link to="/about">高阶组件-属性代理</Link></li>
+				<li><Link to="/inherit">高阶组件-反向继承</Link></li>
 				<li><Link to="/manage">Manage</Link></li>
 				<li><Link to="/system">System</Link></li>				
 			</ul>
@@ -33,6 +34,7 @@ const BasicRouter = () => (
 				<Route path="/about" component={AsyncAbout}/>
 				<Route path="/system" component={AsyncSystem} />
 				<Route path="/manage" component={AsyncManage} />
+				<Route path="/inherit" component={AsyncInherit} />
 			</Switch>
 		</div>
 	</Router>
